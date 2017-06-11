@@ -9,6 +9,18 @@ var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function () {
+//    generate new colors
+    colors = getRandomColors(6);
+//    pick new rand colors
+    pickedColor = pickColor();
+//    change colorDisplay
+    colorDisplay.textContent = pickedColor;
+//    change colors on page
+
+})
 
 for (var i = 0; i < squares.length; i++) {
     // add initial color to squares
@@ -61,5 +73,4 @@ function randomColor() {
     // pick "blue" from 0 - 255
     b = Math.floor(Math.random() * 256)
     return "rgb(" + r + ", " + g + ", " + b + ")"
-
 }
