@@ -1,2 +1,4 @@
 # ignore jetbrains
 .idea/
+
+.idea/workspace.xml
