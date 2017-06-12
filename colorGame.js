@@ -26,15 +26,10 @@ hardBtn.addEventListener("click", function () {
 });
 
 resetButton.addEventListener("click", function () {
-//    generate new colors
-    colors = getRandomColors(6);
-//    pick new rand colors
-    pickedColor = pickColor();
-//    change colorDisplay
-    colorDisplay.textContent = pickedColor;
-//    change colors on page
-    setSquareColors();
-    h1.style.backgroundColor = "#232323";
+    colors = getRandomColors(6);               // Fill the array "colors" with 6 new rgb(x, x, x) colors
+    pickedColor = pickColor();                 //
+    colorDisplay.textContent = pickedColor;    //
+    h1.style.backgroundColor = "#232323";      //
 });
 for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i]
@@ -68,7 +63,8 @@ function changeColors(color) {
     }
 }
 
-function pickColor() {
+function
+pickColor() {
     var random = Math.floor(Math.random() * colors.length);
     return colors[random];
 }
