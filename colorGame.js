@@ -89,8 +89,8 @@ function getRandomColors(num) {                                //
 }
 
 function randomColor() {
-    var r = Math.floor(Math.random() * 256);                  // pick "red" from 0 - 255
-    var g = Math.floor(Math.random() * 256);                  // pick "green" from 0 - 255
-    var b = Math.floor(Math.random() * 256);                  // pick "blue" from 0 - 255
+    var r = Math.floor(Math.random() * 256);                   // pick "red" from 0 - 255
+    var g = Math.floor(Math.random() * 256);                   // pick "green" from 0 - 255
+    var b = Math.floor(Math.random() * 256);                   // pick "blue" from 0 - 255
     return "rgb(" + r + ", " + g + ", " + b + ")"
 }
