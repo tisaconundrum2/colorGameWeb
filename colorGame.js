@@ -11,14 +11,10 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 
 for (var i = 0; i < squares.length; i++) {
-    // add initial color to squares
-    squares[i].style.backgroundColor = colors[i];
-    // add click listeners to squares
-    squares[i].addEventListener("click", function () {
-        //grab color of clicked square
-        var clickedColor = this.style.backgroundColor;
-        // compare color of pickedColor
-        if (clickedColor === pickedColor) {
+    squares[i].style.backgroundColor = colors[i];          // add initial color to squares
+    squares[i].addEventListener("click", function () {     // add click listeners to squares
+        var clickedColor = this.style.backgroundColor;     // grab color of clicked square
+        if (clickedColor === pickedColor) {                // compare color of pickedColor
             messageDisplay.textContent = "Correct";
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor
@@ -30,10 +26,8 @@ for (var i = 0; i < squares.length; i++) {
 }
 
 function changeColors(color) {
-    // loop through all squares
-    for (var i = 0; i < squares.length; i++) {
-        // change everything to given color
-        squares[i].style.backgroundColor = color;
+    for (var i = 0; i < squares.length; i++) {             // loop through all squares
+        squares[i].style.backgroundColor = color;          // change everything to given color
     }
 }
 
@@ -43,23 +37,17 @@ function pickColor() {
 }
 
 function getRandomColors(num) {
-    // return an array of "num" elements
     var arr = [];
     for (var i = 0; i < num; i++) {
-        // get a random color val
-        // push into arr
-        arr.push(randomColor());
+        arr.push(randomColor());                           // get a random color val and push into arr
     }
-    return arr;
+    return arr;                                            // return an array of "num" elements
 }
 
 function randomColor() {
-    // pick "red" from 0 - 255
-    r = Math.floor(Math.random() * 256)
-    // pick "green" from 0 - 255
-    g = Math.floor(Math.random() * 256)
-    // pick "blue" from 0 - 255
-    b = Math.floor(Math.random() * 256)
+    r = Math.floor(Math.random() * 256);                   // pick "red" from 0 - 255
+    g = Math.floor(Math.random() * 256);                   // pick "green" from 0 - 255
+    b = Math.floor(Math.random() * 256);                   // pick "blue" from 0 - 255
     return "rgb(" + r + ", " + g + ", " + b + ")"
 
 }
